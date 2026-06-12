@@ -722,15 +722,75 @@
 
     .price small {
       font-size: 1rem;
-      color: rgba(255,255,255,0.68);
+      color: rgba(255,255,255,0.82);
       font-weight: 700;
       letter-spacing: 0;
+      vertical-align: top;
+    }
+
+    .launch-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 213, 79, 0.16);
+      border: 1px solid rgba(255, 213, 79, 0.28);
+      color: #ffe08b;
+      font-weight: 900;
+      font-size: 0.86rem;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .price-urgency {
+      display: inline-flex;
+      margin-bottom: 10px;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.93rem;
+      font-weight: 700;
+    }
+
+    .old-price {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.96rem;
+      margin-bottom: 10px;
+    }
+
+    .old-price s {
+      color: rgba(255,255,255,0.62);
+      text-decoration-thickness: 2px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .discount-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #ffd85f, #ffb347);
+      color: #5a2b00;
+      font-weight: 950;
+      font-size: 0.95rem;
+      box-shadow: 0 14px 30px rgba(255, 184, 71, 0.28);
+      animation: pulseBadge 2.4s ease-in-out infinite;
     }
 
     .price-note {
-      color: rgba(255,255,255,0.68);
+      color: rgba(255,255,255,0.84);
       margin-bottom: 22px;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
+      font-weight: 700;
     }
 
     .offer .btn-primary {
@@ -892,6 +952,17 @@
       }
     }
 
+    @keyframes pulseBadge {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 14px 30px rgba(255, 184, 71, 0.28);
+      }
+      50% {
+        transform: scale(1.06);
+        box-shadow: 0 20px 40px rgba(255, 184, 71, 0.42);
+      }
+    }
+
     @media (max-width: 980px) {
       .hero {
         padding-top: 48px;
@@ -1009,6 +1080,15 @@
 
       .price {
         font-size: 2.45rem;
+      }
+
+      .price-row {
+        align-items: flex-start;
+      }
+
+      .discount-badge {
+        min-height: 40px;
+        font-size: 0.88rem;
       }
     }
   </style>
@@ -1309,14 +1389,23 @@
 
               <div class="price-card">
                 <div class="price-label">Acesso imediato</div>
+                <div class="launch-tag">🔥 Oferta de lançamento</div>
+                <div class="price-urgency">Preço promocional por tempo limitado</div>
 
-                <div class="price">
-                  R$ 9
-                  <small>,90</small>
+                <div class="old-price">De <s>R$ 19,90</s> por apenas</div>
+
+                <div class="price-row">
+                  <div class="price">
+                    R$ 9
+                    <small>,90</small>
+                  </div>
+                  <div class="discount-badge">67% OFF</div>
                 </div>
 
+                <div class="price-note">Aproveite o valor especial de lançamento e garanta seu eBook agora.</div>
+
                 <a class="btn-primary" href="https://pay.kiwify.com.br/1Mv4a9s">
-                  <span>Garanta meu acesso agora</span>
+                  <span>Quero aproveitar por R$ 9,90</span>
                   <span>→</span>
                 </a>
 
