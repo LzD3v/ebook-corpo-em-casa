@@ -1091,6 +1091,462 @@
         font-size: 0.88rem;
       }
     }
+
+
+    /* Ajustes extras para celulares e telas pequenas */
+    .hero-grid > *,
+    .split > *,
+    .offer-content > *,
+    .cards-3 > *,
+    .trust-grid > * {
+      min-width: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    span,
+    strong,
+    summary {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(217, 107, 124, 0.16), transparent 34%),
+          var(--bg);
+      }
+
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .topbar-inner {
+        gap: 10px;
+      }
+
+      .brand {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .brand span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav-cta {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 34px 0 28px;
+      }
+
+      .hero-grid,
+      .split,
+      .offer-content {
+        gap: 28px;
+      }
+
+      .eyebrow {
+        max-width: 100%;
+        font-size: 0.82rem;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: clamp(2.05rem, 10.8vw, 3.2rem);
+        line-height: 1;
+        letter-spacing: -0.055em;
+        margin-bottom: 18px;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      .hero-subtitle,
+      .section-head p,
+      .offer p {
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .hero-actions {
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .offer .btn-primary {
+        min-height: 56px;
+        padding: 0 18px;
+        text-align: center;
+      }
+
+      .safe-buy {
+        gap: 8px;
+        font-size: 0.9rem;
+      }
+
+      .hero-card-wrap {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .glow {
+        inset: 10% 0;
+        filter: blur(26px);
+      }
+
+      .ebook-card {
+        width: 100%;
+        max-width: 380px;
+        padding: 16px;
+        border-radius: 28px;
+      }
+
+      .ebook-cover {
+        min-height: 390px;
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      .cover-label {
+        margin-bottom: 18px;
+      }
+
+      .cover-title {
+        font-size: 2.05rem;
+        letter-spacing: -0.055em;
+      }
+
+      .cover-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.45;
+      }
+
+      .floating-note {
+        max-width: 100%;
+        padding: 12px 14px;
+        font-size: 0.92rem;
+      }
+
+      .trust-strip {
+        padding: 18px 0 42px;
+      }
+
+      .trust-grid,
+      .cards-3 {
+        gap: 12px;
+      }
+
+      .trust-item,
+      .info-card,
+      .quote {
+        padding: 20px;
+        border-radius: 22px;
+      }
+
+      section {
+        padding: 46px 0;
+      }
+
+      .section-head {
+        margin-bottom: 28px;
+      }
+
+      .mock-phone {
+        width: 100%;
+        max-width: 360px;
+        padding: 12px;
+        border-radius: 28px;
+      }
+
+      .phone-screen {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .routine-card {
+        padding: 14px;
+      }
+
+      .check-list {
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .check {
+        padding: 15px;
+        border-radius: 18px;
+      }
+
+      .offer {
+        padding: 52px 0;
+      }
+
+      .offer-box {
+        padding: 28px 18px;
+      }
+
+      .price-card {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .price-label,
+      .launch-tag,
+      .price-urgency {
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: clamp(2.6rem, 16vw, 3.6rem);
+      }
+
+      .price-note,
+      .security {
+        font-size: 0.9rem;
+      }
+
+      .faq {
+        padding-bottom: 64px;
+      }
+
+      details {
+        padding: 17px 18px;
+        border-radius: 18px;
+      }
+
+      .footer-inner {
+        display: grid;
+        gap: 8px;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: min(100% - 20px, var(--max));
+      }
+
+      .topbar-inner {
+        min-height: 60px;
+      }
+
+      .brand {
+        gap: 8px;
+        font-size: 0.92rem;
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+      }
+
+      .nav-cta {
+        min-height: 38px;
+        padding: 0 11px;
+        font-size: 0.78rem;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .eyebrow {
+        padding: 8px 11px;
+        font-size: 0.78rem;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 11.5vw, 2.75rem);
+      }
+
+      h2 {
+        font-size: clamp(1.6rem, 8.8vw, 2.15rem);
+      }
+
+      .hero-subtitle,
+      .section-head p,
+      .offer p,
+      .info-card p,
+      .check span,
+      details p {
+        font-size: 0.94rem;
+      }
+
+      .safe-buy {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .floating-note {
+        display: none;
+      }
+
+      .ebook-card {
+        max-width: 330px;
+        padding: 12px;
+      }
+
+      .ebook-cover {
+        min-height: 330px;
+        padding: 20px;
+      }
+
+      .cover-title {
+        font-size: 1.78rem;
+      }
+
+      .cover-subtitle {
+        font-size: 0.88rem;
+      }
+
+      .cover-badge {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+
+      .trust-item strong,
+      .info-card h3 {
+        font-size: 1.08rem;
+      }
+
+      .mock-phone {
+        max-width: 320px;
+      }
+
+      .phone-screen {
+        padding: 15px;
+      }
+
+      .mini-title {
+        font-size: 1.2rem;
+      }
+
+      .offer-box {
+        border-radius: 26px;
+        padding: 24px 14px;
+      }
+
+      .price-card {
+        padding: 18px;
+      }
+
+      .launch-tag {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.78rem;
+      }
+
+      .price-row {
+        gap: 10px;
+      }
+
+      .discount-badge {
+        min-height: 36px;
+        padding: 0 12px;
+        font-size: 0.8rem;
+      }
+
+      .security div {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: min(100% - 16px, var(--max));
+      }
+
+      .brand-icon {
+        display: none;
+      }
+
+      .brand {
+        font-size: 0.9rem;
+      }
+
+      .nav-cta {
+        padding: 0 9px;
+        font-size: 0.74rem;
+      }
+
+      h1 {
+        font-size: clamp(1.72rem, 12vw, 2.25rem);
+        letter-spacing: -0.045em;
+      }
+
+      h2 {
+        font-size: clamp(1.45rem, 9vw, 1.95rem);
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .offer .btn-primary {
+        min-height: 52px;
+        font-size: 0.9rem;
+      }
+
+      .ebook-card {
+        max-width: 292px;
+      }
+
+      .ebook-cover {
+        min-height: 300px;
+        padding: 18px;
+      }
+
+      .cover-title {
+        font-size: 1.55rem;
+      }
+
+      .offer-box,
+      .price-card,
+      .info-card,
+      .quote,
+      details {
+        border-radius: 18px;
+      }
+
+      .price {
+        font-size: 2.4rem;
+      }
+
+      .discount-badge {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
   </style>
 </head>
 
